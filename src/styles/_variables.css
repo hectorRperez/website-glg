@@ -68,7 +68,8 @@
 }
 
 body {
-    background-color: var(--gris-2);
+    /* background-color: var(--gris-2); */
+    background-color: #E04D01;
     font-family: 'gilroy-bold';
     ;
 }
