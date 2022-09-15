@@ -1,0 +1,74 @@
+/* Font: 
+
+    Barlow
+        Bold 700
+        Black 900
+    
+*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700;900&family=Noto+Sans+JP:wght@100;300&display=swap');
+
+@font-face {
+    font-family: 'gilroy-regular';
+    src: url('/src/fonts/Gilroy/Gilroy-Regular.otf');
+}
+
+@font-face {
+    font-family: 'gilroy-medium';
+    src: url('/src/fonts/Gilroy/Gilroy-Medium.otf');
+}
+
+@font-face {
+    font-family: 'gilroy-bold';
+    src: url('/src/fonts/Gilroy/Gilroy-Bold.otf');
+}
+
+@font-face {
+    font-family: 'gilroy-black';
+    src: url('/src/fonts/Gilroy/Gilroy-Bold.otf');
+}
+
+:root {
+
+    /* ============= Font and typography ============= */
+    --body-font-gilroy-regular: font-family: 'gilroy-regular', sans-serif;
+    --body-font-gilroy-medium: font-family: 'gilroy-medium', sans-serif;
+    --body-font-gilroy-bold: font-family: 'gilroy-bold', sans-serif;
+    --body-font-gilroy-black: font-family: 'gilroy-black', sans-serif;
+
+    --body-font-barlow: font-family: 'Barlow', sans-serif;
+
+    --biggest-font-size: 2.62rem;
+
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --h4-font-size: 1.12rem;
+    --h5-font-size: 1rem;
+
+
+    /* ======== Colors ============= */
+    --main-blue-1: #101F55;
+    --main-blue-2: #1A659D;
+    --main-blue3: #1D77D4;
+    --main-blue-4: #4496EB;
+
+    --secondary-black-1: #000000;
+    --secondary-gris: #333333;
+    --secondary-orange-1: #E04D01;
+    --secondary-orange-2: #FF7700;
+
+    --gris-1: #A7A8A9;
+    --gris-2: #CACBCB;
+    --gris-3: #DCDCDD;
+    --gris-4: #EDEEEE;
+    --gris-5: #F0F0F0;
+    --gris-6: #FAFAFA;
+    --white: #FFFFFF;
+
+}
+
+body {
+    background-color: var(--gris-2);
+    font-family: 'gilroy-bold';
+    ;
+}
