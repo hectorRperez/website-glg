@@ -1,0 +1,360 @@
+@import './_variables';
+
+$items: 4;
+$transition-duration: 0.5s;
+$transition-delay: 0.05s;
+
+
+/* ========== Base ========= */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--gris-2);
+    font-family: 'gilroy-bold';
+    height: 200vh;
+}
+
+/* =============== HEADER ============== */
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.toggle-btn {
+    display: none;
+    font-size: 25px;
+    color: white;
+    padding: 10px 0;
+    // display: none;
+}
+
+/* ======= Toggle functionality =======*/
+#toggle {
+    display: none; //hides the checkbox
+}
+
+.toggle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#toggle:checked {
+
+    //Any element you need to change the style if menu is open goes here, using the sibling selector (~)
+    &~.toggle-container .button-toggle {
+        box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.8), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+
+        &:before {
+            transform: translateY(-50%) rotate(45deg) scale(1);
+        }
+
+        &:after {
+            transform: translateY(-50%) rotate(-45deg) scale(1);
+        }
+    }
+
+    // Open Nav
+    &~.nav {
+        margin-bottom: 100px;
+        pointer-events: auto;
+        transform: translate(50px, 50px);
+
+        // Restoring nav items from 'lines' in the menu icon
+        .nav-item {
+            color: var(--secondary-orange-1);
+            letter-spacing: 0;
+            height: 40px;
+            line-height: 40px;
+            margin-top: 0;
+            opacity: 1;
+            transform: scaleY(1);
+            transition: $transition-duration, opacity 0.1s;
+
+
+            // Setting delays for the nav items in open transition
+            @for $i from 1 through $items {
+                &:nth-child(#{$i}) {
+                    $delay: ($items - $i) * $transition-delay;
+                    transition-delay: $delay;
+
+                    &:before {
+                        transition-delay: $delay;
+                    }
+                }
+            }
+
+            // Hide the lines
+            &:before {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.button-toggle {
+    position: fixed;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    transition: $transition-duration + 0.1;
+
+    // Shadow on Hover
+    // &:hover {
+    //     box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+    // }
+
+    // Making the 'X' icon using `:before` and `:after` pseudo-elements
+    // Initially hidden beause of `scale(0)` transformation
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary-orange-1);
+        border-radius: 5px;
+        transition: $transition-duration;
+    }
+
+    &:before {
+        transform: translateY(-50%) rotate(45deg) scale(0);
+    }
+
+    &:after {
+        transform: translateY(50%) rotate(-45deg) scale(0);
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 25px 25px 20px;
+    pointer-events: none;
+    transition: $transition-duration;
+    display: block !important;
+}
+
+// Showing nav items as lines, making up the hamburger menu icon
+.nav-item {
+    display: none;
+    position: relative;
+    // display: inline-block !important;
+    float: left;
+    clear: both;
+    color: transparent;
+    font-size: 17px;
+    letter-spacing: -6.2px;
+    height: 7px;
+    line-height: 7px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: scaleY(0.2);
+    transition: $transition-duration, opacity 1s;
+
+    //Set delays for the nav items in close transition
+    @for $i from 1 through $items {
+        &:nth-child(#{$i}) {
+            $delay: ($i - 1) * $transition-delay;
+            transition-delay: $delay;
+
+            &:before {
+                transition-delay: $delay;
+            }
+        }
+    }
+
+    // Adjusting width for first line
+    &:nth-child(1) {
+        letter-spacing: -8px;
+    }
+
+    // Adjusting width for second line
+    &:nth-child(2) {
+        letter-spacing: -7px;
+    }
+
+    // Adjusting the fourth element onwards
+    &:nth-child(n + 4) {
+        letter-spacing: -8px;
+        margin-top: -7px;
+        opacity: 0;
+    }
+
+    //getting lines for the hamburger menu icon
+    &:before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary-orange-1);
+        transform: translateY(-50%) scaleY(5);
+        transition: $transition-duration;
+    }
+}
+
+/* Only movil */
+
+/* ======= End Toggle functionality =======*/
+@media (max-width:630px) {
+    .nav-item {
+        display: inline-block !important;
+    }
+}
+
+.content h2 {
+    transition: all 0.5s ease;
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 900;
+    font-size: var(--biggest-font-size);
+}
+
+.content__btn {
+    align-items: center;
+    background: #1D77D4 !important;
+    border-radius: 10px;
+    display: flex;
+    font-family: 'gilroy-semibold';
+    font-size: 0.875em;
+    height: 49px !important;
+    justify-content: center;
+    margin-top: 24px;
+    padding: 16px 20px;
+    width: 186px;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9) {
+    .back-video {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.navbar {
+    transition: all 0.5s ease;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: flex-end !important;
+}
+
+.nav__item {
+    margin: 30px 20px;
+}
+
+.nav__item a {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0px;
+    transition: color .35s ease;
+}
+
+.nav__item a:hover {
+    color: var(--white);
+}
+
+.nav__item a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    transition: width 0s ease, background .35s ease;
+}
+
+.nav__item a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: var(--secondary-orange-1);
+    transition: width .35s ease;
+}
+
+.nav__item a:hover::before {
+    width: 100%;
+    background-color: var(--secondary-orange-1);
+    transition: width .35s ease;
+}
+
+.nav__item a:hover::after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+.nav__item a {
+    font-family: 'gilroy-bold';
+}
+
+/*only movil*/
+/* 0 >= 630px */
+@media (max-width:630px) {
+    .toggle-btn {
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+}
