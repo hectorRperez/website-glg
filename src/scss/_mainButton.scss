@@ -1,0 +1,13 @@
+@mixin content__btn {
+    align-items: center;
+    background: #1D77D4 !important;
+    border-radius: 10px;
+    display: flex;
+    font-family: 'gilroy-semibold';
+    font-size: 0.875em;
+    height: 3em !important;
+    justify-content: center;
+    margin-top: 24px;
+    padding: 16px 20px;
+    width: 11.62em;
+}

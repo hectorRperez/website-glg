@@ -3,9 +3,10 @@
     Barlow
         Bold 700
         Black 900
+        ExtraBold
 
 */
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@700;900&family=Noto+Sans+JP:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&display=swap");
 @font-face {
   font-family: "gilroy-regular";
   src: url("/src/fonts/Gilroy/Gilroy-Regular.otf");
@@ -33,13 +34,14 @@
   --body-font-gilroy-bold: font-family: "gilroy-bold", sans-serif;
   --body-font-gilroy-black: font-family: "gilroy-black", sans-serif;
   --body-font-barlow: font-family: "Barlow", sans-serif;
-  --biggest-font-size: 2.62rem;
-  --h1-font-size: 2rem;
-  --h2-font-size: 1.5rem;
-  --h3-font-size: 1.25rem;
-  --h4-font-size: 1.12rem;
-  --h5-font-size: 1rem;
+  --biggest-font-size: 2.62em;
+  --h1-font-size: 2em;
+  --h2-font-size: 1.5em;
+  --h3-font-size: 1.25em;
+  --h4-font-size: 1.12em;
+  --h5-font-size: 1em;
   /* ======== Colors ============= */
+  --main-bg: #041423;
   --main-blue-1: #101F55;
   --main-blue-2: #1A659D;
   --main-blue3: #1D77D4;
@@ -54,7 +56,14 @@
   --gris-4: #EDEEEE;
   --gris-5: #F0F0F0;
   --gris-6: #FAFAFA;
+  --gris-7: #878787;
   --white: #FFFFFF;
+}
+
+:root {
+  --avergaLoad: avergaLoad;
+  --bestTeam: bestTeam;
+  --totalClient: totalClient;
 }
 
 /* ========== Base ========= */
@@ -83,20 +92,15 @@ a {
 }
 
 body {
-  background-color: var(--gris-2);
+  background-color: var(--main-bg);
   font-family: "gilroy-bold";
   height: 200vh;
 }
 
-/* =============== HEADER ============== */
+/* =============== Start HEADER ============== */
 .header {
   width: 100%;
-  height: 100vh;
   position: relative;
-  padding: 0 5%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 .toggle-btn {
@@ -278,26 +282,47 @@ body {
     display: inline-block !important;
   }
 }
+.carousel-item {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  left: 5%;
+  top: 35%;
+  z-index: 10;
+  font-size: 16px;
+}
 .content h2 {
   transition: all 0.5s ease;
   color: var(--white);
   font-family: "Barlow", sans-serif;
   font-weight: 900;
-  font-size: var(--biggest-font-size);
+  font-size: 3em;
 }
-
-.content__btn {
+.content .content__main {
   align-items: center;
   background: #1D77D4 !important;
   border-radius: 10px;
   display: flex;
   font-family: "gilroy-semibold";
   font-size: 0.875em;
-  height: 49px !important;
+  height: 3em !important;
   justify-content: center;
   margin-top: 24px;
   padding: 16px 20px;
-  width: 186px;
+  width: 11.62em;
+}
+
+.carousel-indicators button {
+  width: 13px !important;
+  height: 13px !important;
+  border-radius: 50% !important;
+  background-color: var(--gris-7) !important;
+}
+
+.carousel-indicators button.active {
+  background-color: var(--main-blue3) !important;
 }
 
 .back-video {
@@ -392,6 +417,206 @@ body {
   .navbar {
     display: none;
   }
+
+  .content {
+    font-size: 10px;
+    top: 20%;
+  }
+
+  .content h2 {
+    font-size: 2em;
+  }
+
+  .content__btn {
+    margin-top: 10px;
+  }
 }
+/* =============== End HEADER ============== */
+/* =============== Start Welcome ============== */
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+.welcome {
+  margin-top: 100px;
+}
+
+.welcome__header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome__header .welcome__smallTitle {
+  font-size: var(--h2-font-size);
+  font-family: "gilroy-bold", sans-serif;
+  color: var(--white);
+  text-align: center;
+  padding: 25px 15px;
+}
+.welcome__header .welcome__bigTitle {
+  font-size: var(--biggest-font-size);
+  color: var(--secondary-orange-2);
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 20px;
+}
+.welcome__header .welcome__content {
+  font-size: var(--h4-font-size);
+  text-align: center;
+  font-family: "gilroy-medium", sans-serif;
+  color: var(--white);
+  letter-spacing: 0.2px;
+  width: 80%;
+}
+
+.welcome__body .welcome__bodyWrapper {
+  width: 60%;
+  margin: 40px auto;
+}
+.welcome__body .welcome__bodyWrapper .welcome__item {
+  font-size: 42px;
+  color: var(--white);
+  font-family: "gilroy-black" !important;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.welcome__body .welcome__bodyWrapper .welcome__item span {
+  font-size: 14px;
+  font-family: "gilroy-semibold";
+}
+.welcome__body .welcome__bodyWrapper .welcome__item:nth-child(1) h2 {
+  font-size: 42px;
+}
+.welcome__body .welcome__bodyWrapper .welcome__item:nth-child(1) h2 span {
+  font-family: "gilroy-black", sans-serif;
+  font-size: 42px;
+  animation: var(--avergaLoad) 5s normal forwards ease-in-out;
+  counter-set: num var(--num);
+}
+.welcome__body .welcome__bodyWrapper .welcome__item:nth-child(1) h2 span::after {
+  content: counter(num);
+}
+@keyframes avergaLoad {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 15;
+  }
+}
+@keyframes bestTeam {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 90;
+  }
+}
+@keyframes totalClient {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 500;
+  }
+}
+.welcome__body .welcome__bodyWrapper .welcome__item:nth-child(2) h2 {
+  font-size: 42px;
+}
+.welcome__body .welcome__bodyWrapper .welcome__item:nth-child(2) h2 span {
+  font-family: "gilroy-black", sans-serif;
+  font-size: 42px;
+  animation: var(--bestTeam) 5s normal forwards ease-in-out;
+  counter-set: num var(--num);
+}
+.welcome__body .welcome__bodyWrapper .welcome__item:nth-child(2) h2 span::after {
+  content: counter(num);
+}
+@keyframes avergaLoad {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 15;
+  }
+}
+@keyframes bestTeam {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 90;
+  }
+}
+@keyframes totalClient {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 500;
+  }
+}
+.welcome__body .welcome__bodyWrapper .welcome__item:nth-child(3) h2 {
+  font-size: 42px;
+}
+.welcome__body .welcome__bodyWrapper .welcome__item:nth-child(3) h2 span {
+  font-family: "gilroy-black", sans-serif;
+  font-size: 42px;
+  animation: var(--totalClient) 5s normal forwards ease-in-out;
+  counter-set: num var(--num);
+}
+.welcome__body .welcome__bodyWrapper .welcome__item:nth-child(3) h2 span::after {
+  content: counter(num);
+}
+@keyframes avergaLoad {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 15;
+  }
+}
+@keyframes bestTeam {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 90;
+  }
+}
+@keyframes totalClient {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 500;
+  }
+}
+.welcome__body .welcome__bodyWrapper .content__main {
+  margin: 20px auto;
+  align-items: center;
+  background: #1D77D4 !important;
+  border-radius: 10px;
+  display: flex;
+  font-family: "gilroy-semibold";
+  font-size: 0.875em;
+  height: 3em !important;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 16px 20px;
+  width: 11.62em;
+}
+
+/* Only movil - Welcome */
+@media (max-width: 550px) {
+  .welcome {
+    font-size: 12px;
+  }
+}
+/* =============== End Welcome ============== */
 
 /*# sourceMappingURL=main.css.map */

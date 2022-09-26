@@ -3,9 +3,11 @@
     Barlow
         Bold 700
         Black 900
+        ExtraBold
     
 */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700;900&family=Noto+Sans+JP:wght@100;300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&display=swap');
 
 @font-face {
     font-family: 'gilroy-regular';
@@ -42,16 +44,17 @@
 
     --body-font-barlow: font-family: 'Barlow', sans-serif;
 
-    --biggest-font-size: 2.62rem;
+    --biggest-font-size: 2.62em;
 
-    --h1-font-size: 2rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --h4-font-size: 1.12rem;
-    --h5-font-size: 1rem;
+    --h1-font-size: 2em;
+    --h2-font-size: 1.5em;
+    --h3-font-size: 1.25em;
+    --h4-font-size: 1.12em;
+    --h5-font-size: 1em;
 
 
     /* ======== Colors ============= */
+    --main-bg: #041423;
     --main-blue-1: #101F55;
     --main-blue-2: #1A659D;
     --main-blue3: #1D77D4;
@@ -68,5 +71,6 @@
     --gris-4: #EDEEEE;
     --gris-5: #F0F0F0;
     --gris-6: #FAFAFA;
+    --gris-7: #878787;
     --white: #FFFFFF;
 }

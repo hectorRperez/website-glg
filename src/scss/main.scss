@@ -1,9 +1,15 @@
 @import './_variables';
+@import './mainButton';
 
 $items: 4;
 $transition-duration: 0.5s;
 $transition-delay: 0.05s;
 
+:root {
+    --avergaLoad: avergaLoad;
+    --bestTeam: bestTeam;
+    --totalClient: totalClient;
+}
 
 /* ========== Base ========= */
 * {
@@ -31,20 +37,15 @@ a {
 }
 
 body {
-    background-color: var(--gris-2);
+    background-color: var(--main-bg);
     font-family: 'gilroy-bold';
     height: 200vh;
 }
 
-/* =============== HEADER ============== */
+/* =============== Start HEADER ============== */
 .header {
     width: 100%;
-    height: 100vh;
     position: relative;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
 .toggle-btn {
@@ -240,26 +241,40 @@ body {
     }
 }
 
-.content h2 {
-    transition: all 0.5s ease;
-    color: var(--white);
-    font-family: 'Barlow', sans-serif;
-    font-weight: 900;
-    font-size: var(--biggest-font-size);
+.carousel-item {
+    position: relative;
 }
 
-.content__btn {
-    align-items: center;
-    background: #1D77D4 !important;
-    border-radius: 10px;
-    display: flex;
-    font-family: 'gilroy-semibold';
-    font-size: 0.875em;
-    height: 49px !important;
-    justify-content: center;
-    margin-top: 24px;
-    padding: 16px 20px;
-    width: 186px;
+.content {
+    position: absolute;
+    left: 5%;
+    top: 35%;
+    z-index: 10;
+    font-size: 16px;
+
+    & h2 {
+        transition: all 0.5s ease;
+        color: var(--white);
+        font-family: 'Barlow', sans-serif;
+        font-weight: 900;
+        font-size: 3em;
+    }
+
+    .content__main {
+        @include content__btn;
+    }
+}
+
+
+.carousel-indicators button {
+    width: 13px !important;
+    height: 13px !important;
+    border-radius: 50% !important;
+    background-color: var(--gris-7) !important;
+}
+
+.carousel-indicators button.active {
+    background-color: var(--main-blue3) !important;
 }
 
 .back-video {
@@ -357,4 +372,165 @@ body {
         display: none;
     }
 
+    .content {
+        font-size: 10px;
+        top: 20%;
+    }
+
+    .content h2 {
+        font-size: 2em;
+    }
+
+    .content__btn {
+        margin-top: 10px;
+    }
 }
+
+/* =============== End HEADER ============== */
+
+/* =============== Start Welcome ============== */
+
+@property --num {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+}
+
+@mixin counterNumber($keyFrame) {
+    font-size: 42px;
+    animation: $keyFrame 5s normal forwards ease-in-out;
+    counter-set: num var(--num);
+
+    &::after {
+        content: counter(num);
+    }
+
+    @keyframes avergaLoad {
+        from {
+            --num: 0;
+        }
+
+        to {
+            --num: 15;
+        }
+    }
+
+    @keyframes bestTeam {
+        from {
+            --num: 0;
+        }
+
+        to {
+            --num: 90;
+        }
+    }
+
+    @keyframes totalClient {
+        from {
+            --num: 0;
+        }
+
+        to {
+            --num: 500;
+        }
+    }
+
+}
+
+.welcome {
+    margin-top: 100px;
+}
+
+.welcome__header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    & .welcome__smallTitle {
+        font-size: var(--h2-font-size);
+        font-family: 'gilroy-bold', sans-serif;
+        color: var(--white);
+        text-align: center;
+        padding: 25px 15px;
+    }
+
+    & .welcome__bigTitle {
+        font-size: var(--biggest-font-size);
+        color: var(--secondary-orange-2);
+        font-family: 'Barlow', sans-serif;
+        font-weight: 800;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    & .welcome__content {
+        font-size: var(--h4-font-size);
+        text-align: center;
+        font-family: 'gilroy-medium', sans-serif;
+        color: var(--white);
+        letter-spacing: 0.2px;
+        width: 80%;
+    }
+}
+
+.welcome__body .welcome__bodyWrapper {
+    width: 60%;
+    margin: 40px auto;
+
+    & .welcome__item {
+        font-size: 42px;
+        color: var(--white);
+        font-family: 'gilroy-black' !important;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+
+        & span {
+            font-size: 14px;
+            font-family: 'gilroy-semibold';
+        }
+
+        &:nth-child(1) h2 {
+            font-size: 42px;
+
+            & span {
+                font-family: 'gilroy-black', sans-serif;
+                @include counterNumber(var(--avergaLoad))
+            }
+        }
+
+        &:nth-child(2) h2 {
+            font-size: 42px;
+
+            & span {
+                font-family: 'gilroy-black', sans-serif;
+                @include counterNumber(var(--bestTeam))
+            }
+        }
+
+        &:nth-child(3) h2 {
+            font-size: 42px;
+
+            & span {
+                font-family: 'gilroy-black', sans-serif;
+                @include counterNumber(var(--totalClient))
+            }
+        }
+
+    }
+
+    .content__main {
+        margin: 20px auto;
+        @include content__btn;
+    }
+}
+
+/* Only movil - Welcome */
+@media (max-width:550px) {
+    .welcome {
+        font-size: 12px;
+    }
+}
+
+/* =============== End Welcome ============== */
