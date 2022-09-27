@@ -300,6 +300,7 @@ body {
 
 .navbar {
     transition: all 0.5s ease;
+    padding: 0 30px;
 }
 
 .nav__list {
@@ -358,7 +359,8 @@ body {
 }
 
 .nav__item a {
-    font-family: 'gilroy-bold';
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
 }
 
 /*only movil*/
@@ -439,6 +441,11 @@ body {
 
 .welcome {
     margin-top: 100px;
+    background-image: url('/src/img/Group.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
 }
 
 .welcome__header {
