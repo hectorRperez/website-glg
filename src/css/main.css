@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Font: 
 
     Barlow
@@ -108,6 +109,10 @@ body {
   font-size: 25px;
   color: white;
   padding: 10px 0;
+}
+
+.bg-dark-scroll {
+  background-color: #041320;
 }
 
 /* ======= Toggle functionality =======*/
@@ -307,11 +312,11 @@ body {
   display: flex;
   font-family: "gilroy-semibold";
   font-size: 0.875em;
-  height: 3em !important;
+  height: 49px !important;
   justify-content: center;
   margin-top: 24px;
   padding: 16px 20px;
-  width: 11.62em;
+  width: 160px;
 }
 
 .carousel-indicators button {
@@ -346,7 +351,7 @@ body {
 }
 .navbar {
   transition: all 0.5s ease;
-  padding: 0 30px;
+  padding: 42px 80px;
 }
 
 .nav__list {
@@ -610,11 +615,11 @@ body {
   display: flex;
   font-family: "gilroy-semibold";
   font-size: 0.875em;
-  height: 3em !important;
+  height: 49px !important;
   justify-content: center;
   margin-top: 24px;
   padding: 16px 20px;
-  width: 11.62em;
+  width: 160px;
 }
 
 /* Only movil - Welcome */
@@ -624,5 +629,20 @@ body {
   }
 }
 /* =============== End Welcome ============== */
+/* =============== Start Client ============== */
+.client {
+  font-size: 16px;
+}
+
+/*TODO: Agregar espaciado a el titulo de la sección de clientes*/
+.client__header h2 {
+  margin: 0 72px;
+  color: white;
+  font-size: var(--h1-font-size);
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 58px;
+}
+
+/* =============== End Client ============== */
 
 /*# sourceMappingURL=main.css.map */

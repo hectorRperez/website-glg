@@ -56,6 +56,10 @@ body {
     // display: none;
 }
 
+.bg-dark-scroll {
+    background-color: #041320;
+}
+
 /* ======= Toggle functionality =======*/
 #toggle {
     display: none; //hides the checkbox
@@ -300,7 +304,7 @@ body {
 
 .navbar {
     transition: all 0.5s ease;
-    padding: 0 30px;
+    padding: 42px 80px;
 }
 
 .nav__list {
@@ -541,3 +545,19 @@ body {
 }
 
 /* =============== End Welcome ============== */
+
+/* =============== Start Client ============== */
+.client {
+    font-size: 16px;
+}
+
+/*TODO: Agregar espaciado a el titulo de la sección de clientes*/
+.client__header h2 {
+    margin: 0 72px;
+    color: white;
+    font-size: var(--h1-font-size);
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 58px;
+}
+
+/* =============== End Client ============== */

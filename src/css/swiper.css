@@ -25,7 +25,7 @@
 .swiper-slide img {
     display: block;
     width: 180px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .mySwiper .swiper-button-next,
@@ -35,12 +35,12 @@
     height: 40px;
 }
 
-.mySwiper .swiper-button-prev::after{
+.mySwiper .swiper-button-prev::after {
     padding-left: 13px;
     color: white;
 }
 
-.mySwiper .swiper-button-next::after{
+.mySwiper .swiper-button-next::after {
     padding-left: 17px;
     color: white;
 }
@@ -51,9 +51,7 @@
     width: 100%;
     font-size: 18px;
     font-weight: bold;
-    color: white;
-    opacity: 20%;
-    background-color: #2A3744;
+    background-color: rgba(42, 55, 62, 20%);
     clip-path: circle(50% at 50% 50%);
     display: flex;
     align-items: center;
