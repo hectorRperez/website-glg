@@ -1,9 +1,12 @@
-/*TODO: CONDICIONAL PARA MOSTRAR LA CANTIDAD DE ELEMENTOS EN EL SLIDER*/
-
 let isMovil = false;
 
+if (window.innerWidth < 800) {
+    isMovil = true;
+}
+
+
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
+    slidesPerView: isMovil ? 1 : 4,
     spaceBetween: 10,
     slidesPerGroup: 1,
     loop: true,
