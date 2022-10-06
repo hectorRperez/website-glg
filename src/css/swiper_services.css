@@ -56,3 +56,14 @@
     font-family: 'gilroy-regular', sans-serif;
     text-align: left;
 }
+
+/* ====== FOOTER ONLY MOVIL =========== */
+@media (max-width: 700px) {
+    .logistic-swiper-slide img {
+        width: 60%;
+    }
+
+    .swiper-slide__body {
+        width: 50%;
+    }
+}
