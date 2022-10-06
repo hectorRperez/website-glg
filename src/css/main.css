@@ -633,6 +633,7 @@ body {
 /* =============== Start Client ============== */
 .client {
   font-size: 16px;
+  margin-bottom: 80px;
 }
 
 /*TODO: Agregar espaciado a el titulo de la sección de clientes*/
@@ -645,6 +646,42 @@ body {
 }
 
 /* =============== End Client ============== */
+/* ====== START SECCTION LOGISTIC ======*/
+.logistic__section {
+  font-size: 16px;
+}
+.logistic__section h3 {
+  font-family: "gilroy-semibold";
+  font-size: var(--h2-font-size);
+  color: var(--secondary-orange-2);
+}
+.logistic__section h2 {
+  font-size: var(--h1-font-size);
+  color: var(--white);
+  font-family: "Barlow", sans-serif;
+}
+
+.logistics__wrapper .content__main {
+  align-items: center;
+  background: #1D77D4 !important;
+  border-radius: 10px;
+  display: flex;
+  font-family: "gilroy-semibold";
+  font-size: 0.875em;
+  height: 49px !important;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 16px 20px;
+  width: 160px;
+}
+
+/* ====== LOGISTIC ONLY MOVIL =========== */
+@media (max-width: 1024px) {
+  .logistic__section {
+    font-size: 10px;
+  }
+}
+/* ====== END SECCTION LOGISTIC ======*/
 /* ============== FOOTER ================*/
 footer {
   margin-top: 89px;
@@ -682,15 +719,18 @@ footer .row {
 
 .footer__col-2 {
   padding: 20px;
+  position: relative;
+  bottom: 20px;
 }
-.footer__col-2 borders .footer__col-2__header h2 {
+.footer__col-2 .footer__col-2__header h2 {
   font-size: 24px;
   font-weight: 900;
   margin-bottom: 24px;
+  font-family: "Barlow", sans-serif;
 }
 
 .footer__col-2__item {
-  margin: 14px 0;
+  margin: 24px 0;
 }
 
 .footer__col-2__item a {
