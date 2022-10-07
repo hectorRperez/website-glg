@@ -28,6 +28,15 @@
     object-fit: contain;
 }
 
+.slide-client img {
+    filter: grayscale(100%);
+}
+
+.slide-client img:hover {
+    filter: grayscale(0);
+    cursor: grab;
+}
+
 .mySwiper .swiper-button-next,
 .mySwiper .swiper-button-prev {
     width: 40px;
