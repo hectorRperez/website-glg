@@ -417,7 +417,7 @@ body {
 
 /*only movil*/
 /* 0 >= 630px */
-@media (max-width: 630px) {
+@media (max-width: 800px) {
   .toggle-btn {
     display: flex;
   }
@@ -682,6 +682,151 @@ body {
   }
 }
 /* ====== END SECCTION LOGISTIC ======*/
+/* ====== STAR CARRIERS SECTION ======*/
+.carriers {
+  font-size: 16px;
+  margin: auto;
+  margin-top: 77px;
+  position: relative;
+}
+.carriers .carriers__bg {
+  position: absolute;
+  top: 10px;
+  right: 124px;
+  z-index: -10;
+}
+.carriers img {
+  object-fit: contain;
+  width: 630px;
+  height: 382px;
+  border-radius: 20px;
+}
+.carriers small {
+  margin-top: 10px;
+  margin-bottom: 41px;
+  padding: 5px 10px;
+  text-align: center;
+  width: 99px;
+  font-size: 1em;
+  font-family: "gilroy-bold", sans-serif;
+  background-color: rgba(255, 119, 0, 0.2);
+  color: var(--secondary-orange-2);
+  border-radius: 10px;
+}
+.carriers h1 {
+  margin-bottom: 41px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: var(--h1-font-size);
+  color: var(--white);
+}
+.carriers p {
+  font-family: "gilroy-regular", sans-serif;
+  font-size: var(--h4-font-size);
+  color: var(--white);
+  text-align: justify;
+}
+.carriers .content__main {
+  align-items: center;
+  background: #1D77D4 !important;
+  border-radius: 10px;
+  display: flex;
+  font-family: "gilroy-semibold";
+  font-size: 0.875em;
+  height: 49px !important;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 16px 20px;
+  width: 160px;
+}
+
+/* ====== CARRIERS ONLY MOVIL =========== */
+@media (max-width: 800px) {
+  .carriers .carriers__info {
+    text-align: center;
+  }
+  .carriers .content__main {
+    margin: auto;
+  }
+  .carriers .carrier__title {
+    text-align: left;
+  }
+  .carriers img {
+    width: 80%;
+    height: 100%;
+  }
+}
+/* ====== END CARRIERS SECTION ======*/
+/*-- ================ START SECTION WORKING WITH US ================ --*/
+.working-with-us {
+  margin-top: 212px;
+  height: 572px;
+  width: 100%;
+  position: relative;
+}
+
+.working-with-us__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  width: 45%;
+  margin-left: 93px;
+}
+.working-with-us__content h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  color: var(--white);
+}
+.working-with-us__content p {
+  font-family: "gilroy-semibold";
+  font-size: 18px;
+  color: var(--white);
+}
+.working-with-us__content .content__main {
+  align-items: center;
+  background: #1D77D4 !important;
+  border-radius: 10px;
+  display: flex;
+  font-family: "gilroy-semibold";
+  font-size: 0.875em;
+  height: 49px !important;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 16px 20px;
+  width: 160px;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+/*-- ================ ONLY MOVIL WORKING WITH US ================ --*/
+@media (max-width: 700px) {
+  .working-with-us__content {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+/*-- ================ END SECTION WORKING WITH US ================ --*/
 /* ============== FOOTER ================*/
 footer {
   margin-top: 89px;
@@ -771,108 +916,6 @@ footer .row {
   color: #041320;
 }
 
-/* ====== STAR CARRIERS SECTION ======*/
-.carriers {
-  font-size: 16px;
-  margin: auto;
-  margin-top: 77px;
-  position: relative;
-}
-.carriers .carriers__bg {
-  position: absolute;
-  top: 10px;
-  right: 124px;
-  z-index: -10;
-}
-.carriers img {
-  object-fit: contain;
-  width: 630px;
-  height: 382px;
-  border-radius: 20px;
-}
-.carriers small {
-  margin-top: 10px;
-  margin-bottom: 41px;
-  padding: 5px 10px;
-  text-align: center;
-  width: 99px;
-  font-size: 1em;
-  font-family: "gilroy-bold", sans-serif;
-  background-color: rgba(255, 119, 0, 0.2);
-  color: var(--secondary-orange-2);
-  border-radius: 10px;
-}
-.carriers h1 {
-  margin-bottom: 41px;
-  font-family: "Barlow", sans-serif;
-  font-weight: 700;
-  font-size: var(--h1-font-size);
-  color: var(--white);
-}
-.carriers p {
-  font-family: "gilroy-regular", sans-serif;
-  font-size: var(--h4-font-size);
-  color: var(--white);
-  text-align: justify;
-}
-.carriers .content__main {
-  align-items: center;
-  background: #1D77D4 !important;
-  border-radius: 10px;
-  display: flex;
-  font-family: "gilroy-semibold";
-  font-size: 0.875em;
-  height: 49px !important;
-  justify-content: center;
-  margin-top: 24px;
-  padding: 16px 20px;
-  width: 160px;
-}
-
-/* ====== CARRIERS ONLY MOVIL =========== */
-@media (max-width: 600px) {
-  .carriers .carriers__info {
-    text-align: center;
-  }
-  .carriers .content__main {
-    margin: auto;
-  }
-  .carriers img {
-    width: 100%;
-    height: 100%;
-  }
-}
-/* ====== END CARRIERS SECTION ======*/
-/*-- ================ START SECTION WORKING WITH US ================ --*/
-.working-with-us {
-  height: 60vh;
-  width: 100%;
-  position: relative;
-  border-style: solid;
-}
-
-.video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-}
-
-@media (min-aspect-ratio: 16/9) {
-  .video {
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-aspect-ratio: 16/9) {
-  .video {
-    width: auto;
-    height: 100%;
-  }
-}
-/*-- ================ END SECTION WORKING WITH US ================ --*/
 /* ====== FOOTER ONLY MOVIL =========== */
 @media (max-width: 1024px) {
   footer {
