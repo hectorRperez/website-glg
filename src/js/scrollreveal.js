@@ -6,3 +6,4 @@ ScrollReveal().reveal('.logistic-swiper', { delay: 400 });
 ScrollReveal().reveal('.carriers', { delay: 400 });
 ScrollReveal().reveal('.carriers', { delay: 400 });
 ScrollReveal().reveal('.location', { delay: 400 });
+ScrollReveal().reveal('.contact-us', { delay: 400 });
