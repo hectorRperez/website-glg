@@ -1,4 +1,4 @@
-ScrollReveal({ reset: true });
+ScrollReveal({ reset: false });
 ScrollReveal().reveal('.headline', { delay: 400 });
 ScrollReveal().reveal('.client', { delay: 400 });
 ScrollReveal().reveal('.logistic__section', { delay: 400 });
