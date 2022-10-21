@@ -1,0 +1,111 @@
+/* Font: 
+
+    Barlow
+        Bold 700
+        Black 900
+        ExtraBold
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&display=swap");
+@font-face {
+  font-family: "gilroy-regular";
+  src: url("/src/fonts/Gilroy/Gilroy-Regular.otf");
+}
+@font-face {
+  font-family: "gilroy-semibold";
+  src: url("/src/fonts/Gilroy/Gilroy-Semibold.otf");
+}
+@font-face {
+  font-family: "gilroy-medium";
+  src: url("/src/fonts/Gilroy/Gilroy-Medium.otf");
+}
+@font-face {
+  font-family: "gilroy-bold";
+  src: url("/src/fonts/Gilroy/Gilroy-Bold.otf");
+}
+@font-face {
+  font-family: "gilroy-black";
+  src: url("/src/fonts/Gilroy/Gilroy-Bold.otf");
+}
+:root {
+  /* ============= Font and typography ============= */
+  --body-font-gilroy-regular: font-family: "gilroy-regular", sans-serif;
+  --body-font-gilroy-medium: font-family: "gilroy-medium", sans-serif;
+  --body-font-gilroy-bold: font-family: "gilroy-bold", sans-serif;
+  --body-font-gilroy-black: font-family: "gilroy-black", sans-serif;
+  --body-font-barlow: font-family: "Barlow", sans-serif;
+  --biggest-font-size: 2.62em;
+  --h1-font-size: 2em;
+  --h2-font-size: 1.5em;
+  --h3-font-size: 1.25em;
+  --h4-font-size: 1.12em;
+  --h5-font-size: 1em;
+  /* ======== Colors ============= */
+  --main-bg: #041423;
+  --main-blue-1: #101F55;
+  --main-blue-2: #1A659D;
+  --main-blue3: #1D77D4;
+  --main-blue-4: #4496EB;
+  --secondary-black-1: #000000;
+  --secondary-gris: #333333;
+  --secondary-orange-1: #E04D01;
+  --secondary-orange-2: #FF7700;
+  --gris-1: #A7A8A9;
+  --gris-2: #CACBCB;
+  --gris-3: #DCDCDD;
+  --gris-4: #EDEEEE;
+  --gris-5: #F0F0F0;
+  --gris-6: #FAFAFA;
+  --gris-7: #878787;
+  --white: #FFFFFF;
+}
+
+/* ============ START HERO AREA ============*/
+.hero {
+  background-image: url("/src/img/hero_carriers.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero__content {
+  width: 90%;
+  font-size: 16px;
+  margin: auto;
+}
+.hero__content .content__main {
+  align-items: center;
+  background: #1D77D4 !important;
+  border-radius: 10px;
+  display: flex;
+  font-family: "gilroy-semibold";
+  font-size: 0.875em;
+  height: 49px !important;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 16px 20px;
+  width: 160px;
+  box-shadow: 0px 5px 20px rgba(29, 119, 212, 0.25);
+}
+.hero__content .content__wrapper {
+  width: 453px;
+}
+
+.hero__content h1 {
+  color: var(--white);
+  font-family: "Barlow", sans-serif;
+  font-size: 3em;
+  font-weight: 900;
+}
+
+@media (max-width: 500px) {
+  .hero__content .content__wrapper {
+    width: 100%;
+  }
+}
+/* ============ END HERO AREA ============*/
+
+/*# sourceMappingURL=carriers.css.map */
