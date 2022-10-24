@@ -60,6 +60,11 @@
   --white: #FFFFFF;
 }
 
+.container__carriers {
+  width: 90%;
+  margin: auto;
+}
+
 /* ============ START HERO AREA ============*/
 .hero {
   background-image: url("/src/img/hero_carriers.png");
@@ -107,5 +112,109 @@
   }
 }
 /* ============ END HERO AREA ============*/
+.reliability_guaranteed {
+  margin-top: 32px;
+  font-size: 16px;
+}
+
+.reliability_guaranteed__title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: var(--h1-font-size);
+  color: var(--white);
+}
+
+.reliability_guaranteed__info {
+  margin-top: 24px;
+  font-family: "gilroy-bold";
+  font-size: var(--h4-font-size);
+  color: var(--white);
+}
+
+.benefits {
+  margin-top: 48px;
+  font-size: 16px;
+}
+
+.benefits__subtitle {
+  font-family: "gilroy-bold";
+  font-size: var(--h2-font-size);
+  color: var(--secondary-orange-2);
+  margin-bottom: 32px;
+}
+
+.benefits__title {
+  font-family: "gilroy-bold";
+  font-size: var(--h1-font-size);
+  color: var(--white);
+}
+
+.benefits__wrapper {
+  margin: 0 auto;
+  margin-top: 54px;
+  width: 90%;
+}
+
+.benefits__card {
+  margin: 10px 0;
+  position: relative;
+  padding: 42px 42px;
+  border-radius: 20px;
+  background: transparent;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  min-height: 241px;
+  width: 100%;
+}
+
+.benefits__card::before {
+  content: "";
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(104, 111, 118, 0.4);
+  z-index: -1;
+}
+
+.card__title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card__title h3 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  color: var(--white);
+}
+
+.card__title img {
+  width: 16.46px;
+  height: 20px;
+}
+
+.card__info p {
+  margin-top: 8px;
+  font-family: "gilroy-medium", sans-serif;
+  font-size: 0.87em;
+  color: var(--white);
+  text-align: justify;
+}
+
+.card__link {
+  color: var(--secondary-orange-2);
+  text-decoration: underline;
+  font-size: 0.75em;
+}
+
+/* only movil Reliability Guaranteed & Benefits */
+@media (min-width: 1200px) {
+  .benefits__card {
+    width: 337px;
+  }
+}
 
 /*# sourceMappingURL=carriers.css.map */
