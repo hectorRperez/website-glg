@@ -252,4 +252,11 @@
   margin-top: 25px;
 }
 
+.haul_with_us .working-with-us {
+  background-image: url("/src/img/carriers_baner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
 /*# sourceMappingURL=carriers.css.map */
