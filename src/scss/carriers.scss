@@ -1,222 +1,336 @@
-@import './_variables';
-@import './mainButton';
-
-
 /* ============ START BASE ============*/
 .container__carriers {
-    width: 90%;
-    margin: auto;
+	width: 90%;
+	margin: auto;
 }
 
 .carrites__subtitle {
-    font-family: 'gilroy-bold';
-    font-size: var(--h2-font-size);
-    color: var(--secondary-orange-2);
-    margin-bottom: 32px;
+	font-family: "gilroy-bold";
+	font-size: var(--h2-font-size);
+	color: var(--secondary-orange-2);
+	margin-bottom: 29px;
 }
 
 .carriers__title {
-    font-family: 'gilroy-bold';
-    font-size: var(--h1-font-size);
-    color: var(--white);
+	font-family: "gilroy-bold";
+	font-size: var(--h1-font-size);
+	color: var(--white);
 }
 
 /* ============ END BASE ============*/
-
-
 /* ============ START HERO AREA ============*/
 .hero {
-    background-image: url('/src/img/hero_carriers.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+	background-image: url("/src/img/hero_carriers.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
 }
 
 .hero__content {
-    width: 90%;
-    font-size: 16px;
-    margin: auto;
+	width: 90%;
+	font-size: 16px;
+	margin: auto;
+}
 
-    & .content__main {
-        @include content__btn;
-    }
+.hero__content .content__main {
+	align-items: center;
+	background: #1D77D4 !important;
+	border-radius: 10px;
+	display: flex;
+	font-family: "gilroy-semibold";
+	font-size: 0.875em;
+	height: 49px !important;
+	justify-content: center;
+	margin-top: 24px;
+	padding: 16px 20px;
+	width: 160px;
+	box-shadow: 0px 5px 20px rgba(29, 119, 212, 0.25);
+}
 
-    & .content__wrapper {
-        width: 453px;
-    }
+.hero__content .content__wrapper {
+	width: 453px;
 }
 
 .hero__content h1 {
-    color: var(--white);
-    font-family: 'Barlow', sans-serif;
-    font-size: 3em;
-    font-weight: 900;
+	color: var(--white);
+	font-family: "Barlow", sans-serif;
+	font-size: 3em;
+	font-weight: 900;
 }
 
-@media (max-width:500px) {
-
-    .hero__content {
-
-        & .content__wrapper {
-            width: 100%;
-        }
-    }
-
+@media (max-width: 500px) {
+	.hero__content .content__wrapper {
+		width: 100%;
+	}
 }
 
 /* ============ END HERO AREA ============*/
-
-
-//  ============ STAR Reliability Guaranteed & Benefits ============
 .reliability_guaranteed {
-    margin-top: 32px;
-    font-size: 16px;
-    // background: url('/src/img/map_carriers.png');
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
-
+	margin-top: 32px;
+	font-size: 16px;
 }
 
 .reliability_guaranteed__title {
-    font-family: 'Barlow', sans-serif;
-    font-weight: 700;
-    font-size: var(--h1-font-size);
-    color: var(--white);
+	font-family: "Barlow", sans-serif;
+	font-weight: 700;
+	font-size: var(--h1-font-size);
+	color: var(--white);
 }
 
 .reliability_guaranteed__info {
-    margin-top: 24px;
-    font-family: 'gilroy-bold';
-    font-size: var(--h4-font-size);
-    color: var(--white);
+	margin-top: 24px;
+	font-family: 'gilroy-semibold';
+	font-size: var(--h4-font-size);
+	color: var(--white);
 }
 
 .benefits {
-    margin-top: 48px;
-    font-size: 16px;
+	margin-top: 48px;
+	font-size: 16px;
 }
 
-
 .benefits__wrapper {
-    margin: 0 auto;
-    margin-top: 54px;
-    width: 90%;
+	margin: 0 auto;
+	margin-top: 54px;
+	width: 90%;
 }
 
 .benefits__card {
-    margin: 10px 0;
-    position: relative;
-    padding: 42px 42px;
-    border-radius: 20px;
-    background: transparent;
-    overflow: hidden;
-    backdrop-filter: blur(5px);
-    min-height: 241px;
-    width: 100%;
+	margin: 10px 0;
+	position: relative;
+	padding: 42px 42px;
+	border-radius: 20px;
+	background: transparent;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	min-height: 241px;
+	width: 100%;
 }
 
 .benefits__card::before {
-    content: "";
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(104, 111, 118, 0.4);
-    z-index: -1;
+	content: "";
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(104, 111, 118, 0.4);
+	z-index: -1;
 }
 
 .card__title {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin-bottom: 14px;
 }
 
 .card__title h3 {
-    font-family: 'Barlow', sans-serif;
-    font-weight: 700;
-    font-size: 1em;
-    color: var(--white);
+	font-family: "Barlow", sans-serif;
+	font-weight: 700;
+	font-size: 1em;
+	color: var(--white);
 }
 
 .card__title img {
-    width: 16.46px;
-    height: 20px;
+	width: 23.97px;
+	height: 24px;
+}
+
+.card__info {
+	font-size: 16px;
 }
 
 .card__info p {
-    margin-top: 8px;
-    font-family: 'gilroy-medium', sans-serif;
-    font-size: 0.87em;
-    color: var(--white);
-    text-align: justify;
+	margin-top: 8px;
+	font-family: 'gilroy-regular';
+	font-size: 0.87em;
+	color: var(--white);
+	text-align: justify;
+	margin-bottom: 14px;
 }
 
 .card__link {
-    color: var(--secondary-orange-2);
-    text-decoration: underline;
-    font-size: 0.75em;
+	color: var(--secondary-orange-2);
+	text-decoration: underline;
+	font-size: 0.75em;
 }
 
 /* only movil Reliability Guaranteed & Benefits */
-@media (min-width:1200px) {
-    .benefits__card {
-        width: 337px;
-    }
+@media (min-width: 1200px) {
+	.benefits__card {
+		width: 363px;
+	}
 }
 
-
-//  ============ END Reliability Guaranteed & Benefits ============
-
-//  ============ STAR Payment options ============
-
 .payment_options {
-    margin-top: 100px;
+	margin-top: 100px;
 }
 
 .payment_options__wrapper {
-    margin: 0 auto;
-    margin-top: 54px;
-    width: 90%;
+	margin: 0 auto;
+	margin-top: 54px;
+	width: 90%;
 }
 
 .payment_options__item {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: space-between;
-    margin-right: 71px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	justify-content: space-between;
+	width: 156px;
 }
 
 .payment_options__item img {
-    width: 40px;
-    height: 40px;
+	width: 40px;
+	height: 40px;
 }
 
 .payment_options__item h3 {
-    font-size: 24px;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 900;
-    color: var(--white);
+	font-size: 24px;
+	font-family: "Barlow", sans-serif;
+	font-weight: 900;
+	color: var(--white);
 }
 
 .payment_options__wrapper .payment_options__item:last-child {
-    margin-top: 25px;
+	margin-top: 25px;
 }
 
-//  ============ END Payment options ============
-
-//  ============ END Haul with us ============
+.haul_with_us {
+	margin-bottom: 100px;
+}
 
 .haul_with_us .working-with-us {
-    background-image: url('/src/img/carriers_baner.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
+	background-image: url("/src/img/carriers_baner.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
 }
 
-//  ============ END Haul with us ============
+.swiper {
+	margin-top: 42px;
+	width: 100%;
+	height: 409px;
+}
+
+.swiper:hover {
+	cursor: grab;
+}
+
+.swiper-slide {
+	background: rgba(237, 237, 237, 0.1);
+	text-align: center;
+	font-size: 18px;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slide__wrapper {
+	display: flex;
+	gap: 68px;
+	width: 70%;
+}
+
+.avatar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 27px;
+}
+
+.avatar img {
+	gap: 26px;
+	width: 248px;
+	height: 248px;
+	object-fit: cover;
+}
+
+.avatar__name {
+	text-align: start;
+	font-size: 16px;
+}
+
+.avatar__name h2 {
+	font-family: 'Barlow', sans-serif;
+	font-size: 1.5em;
+	font-weight: 900;
+	color: var(--white);
+}
+
+.avatar__name h3 {
+	font-family: 'gilroy-medium', sans-serif;
+	font-size: 16px;
+	color: var(--white);
+}
+
+.testimonials {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	height: 100%;
+	font-size: 16px;
+}
+
+.testimonials p {
+	text-align: justify;
+	font-size: 1.125em;
+	font-family: 'gilroy-regular';
+	color: var(--white);
+}
+
+@media (max-width: 1026px) {
+
+	.swiper {
+		height: 70vh;
+	}
+
+	.slide__wrapper {
+		height: 80%;
+	}
+
+	.slide__wrapper .row {
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+
+	.avatar img {
+		gap: 26px;
+		width: 80px;
+		height: 80px;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 425px) {
+	.avatar__name h2 {
+		font-size: 1.125em;
+	}
+
+	.testimonials p {
+		font-size: 0.875em;
+	}
+}
