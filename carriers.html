@@ -112,7 +112,7 @@
 							<div class="card__info">
 								<p>At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst
 									eros, tempus in diam. Ornare </p>
-								<a class="card__link" href="#">Read more</a>
+								<a onclick="toggleModal()" class="card__link">Read more</a>
 							</div>
 						</div>
 					</div>
@@ -125,7 +125,8 @@
 							<div class="card__info">
 								<p>At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst
 									eros, tempus in diam. Ornare </p>
-								<a class="card__link" href="#">Read more</a>
+								<a onclick="toggleModal()" class="card__link">Read
+									more</a>
 							</div>
 						</div>
 					</div>
@@ -138,7 +139,7 @@
 							<div class="card__info">
 								<p>At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst
 									eros, tempus in diam. Ornare </p>
-								<a class="card__link" href="#">Read more</a>
+								<a onclick="toggleModal()" class="card__link">Read more</a>
 							</div>
 						</div>
 					</div>
@@ -153,7 +154,7 @@
 							<div class="card__info">
 								<p>At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst
 									eros, tempus in diam. Ornare </p>
-								<a class="card__link" href="#">Read more</a>
+								<a onclick="toggleModal()" class="card__link">Read more</a>
 							</div>
 						</div>
 					</div>
@@ -166,7 +167,7 @@
 							<div class="card__info">
 								<p>At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst
 									eros, tempus in diam. Ornare </p>
-								<a class="card__link" href="#">Read more</a>
+								<a onclick="toggleModal()" class="card__link">Read more</a>
 							</div>
 						</div>
 					</div>
@@ -179,7 +180,7 @@
 							<div class="card__info">
 								<p>At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst
 									eros, tempus in diam. Ornare </p>
-								<a class="card__link" href="#">Read more</a>
+								<a onclick="toggleModal()" class="card__link">Read more</a>
 							</div>
 						</div>
 					</div>
@@ -242,6 +243,7 @@
 		</h2>
 		<h1 class="carriers__title">What our carriers says</h1>
 	</section>
+
 	<div class="swiper mySwiper">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
@@ -334,6 +336,28 @@
 		</div>
 	</div>
 
+	<!-- Modals -->
+	<div class="modal-background" onclick="toggleModal()"></div>
+	<div class="modal-benefits">
+		<div class="modal__header">
+			<i onclick="toggleModal()" class='bx bx-x'></i>
+		</div>
+		<div class="modal__content">
+			<h2>Freight of all types and commodites</h2>
+			<p>Global Logistics Group – GLG takes pride in working with a wide variety of carriers, giving every
+				client option for moving cargo at any time. They offer diverse options for freight services. Count
+				on us whenever you plan to ship:</p>
+			<ul>
+				<li>EFS Fuel Advance</li>
+				<li>Payment 24 Hours</li>
+				<li>7 Days</li>
+				<li>7 Days</li>
+				<li>21 days (No fee)</li>
+				<li>ACH Direct Deposit</li>
+			</ul>
+		</div>
+	</div>
+
 	<!-- ================ START FOOTER SECTION ================ -->
 	<footer>
 		<div class="container-fluid">
@@ -412,8 +436,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 	<!-- ======= Javascript que se encarga del navbar ======= -->
-	<script src="/src/js/navbar.js"></script>
+	<!-- <script src="/src/js/navbar.js"></script> -->
 
+	<!-- Swiper carriers feedback -->
 	<script>
 		var swiper = new Swiper(".mySwiper", {
 			navigation: {
@@ -426,6 +451,21 @@
 				disableOnInteraction: false,
 			},
 		});
+	</script>
+
+	<!-- Js for Modals -->
+	<script>
+		const toggleModal = () => {
+			const bodyClassList = document.body.classList;
+
+			if (bodyClassList.contains("open")) {
+				bodyClassList.remove("open");
+				bodyClassList.add("closed");
+			} else {
+				bodyClassList.remove("closed");
+				bodyClassList.add("open");
+			}
+		};
 	</script>
 </body>
 
