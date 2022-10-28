@@ -158,6 +158,12 @@
   font-size: 0.75em;
 }
 
+.card__link:hover {
+  color: var(--secondary-orange-1);
+  transition: all ease-in 0.3s;
+  cursor: pointer;
+}
+
 /* only movil Reliability Guaranteed & Benefits */
 @media (min-width: 1200px) {
   .benefits__card {
@@ -192,10 +198,6 @@
   font-family: "Barlow", sans-serif;
   font-weight: 900;
   color: var(--white);
-}
-
-.payment_options__wrapper .payment_options__item:last-child {
-  margin-top: 25px;
 }
 
 .haul_with_us {
@@ -415,6 +417,10 @@ body.closed .modal-benefits {
   font-size: 24px;
 }
 
+.modal__header i:hover {
+  cursor: pointer;
+}
+
 .modal__content {
   width: 630px;
   font-size: 16px;
@@ -463,6 +469,57 @@ body.closed .modal-benefits {
   .modal__content ul li {
     font-size: 0.75em;
   }
+}
+.faqs__subtitle {
+  font-size: 32px;
+  color: var(--white);
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+}
+
+.accordion {
+  margin-top: 20px;
+}
+
+.accordion-button::after {
+  background-image: url("/src/img/icons/dashicons_arrow-down-alt2.png") !important;
+}
+
+.accordion-header .accordion-button {
+  background: var(--main-bg) !important;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  border-color: var(--white);
+  outline: none;
+  color: var(--white);
+  font-family: "gilroy-semibold";
+  font-size: 18px;
+}
+
+.accordion-header .accordion-button:hover {
+  color: var(--secondary-orange-2);
+  transition: all ease-in 0.3s;
+}
+
+.accordion-header .accordion-button:focus {
+  background-color: red;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  outline: none;
+  color: var(--secondary-orange-2);
+}
+
+.accordion-item {
+  background: var(--main-bg);
+}
+
+.accordion-body {
+  color: var(--white);
+  font-family: "gilroy-regular", sans-serif;
+  font-size: 16px;
+  text-align: justify;
 }
 
 /*# sourceMappingURL=carriers.css.map */
