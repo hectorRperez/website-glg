@@ -5,15 +5,15 @@
 }
 
 .carrites__subtitle {
-  font-family: "gilroy-bold";
+  font-family: "gilroy-semibold";
   font-size: var(--h2-font-size);
   color: var(--secondary-orange-2);
-  margin-bottom: 29px;
+  margin-bottom: 5px;
 }
 
 .carriers__title {
-  font-family: "gilroy-bold";
-  font-size: var(--h1-font-size);
+  font-family: "Barlow", sans-serif;
+  font-size: 32px;
   color: var(--white);
 }
 
@@ -482,7 +482,7 @@ body.closed .modal-benefits {
 }
 
 .accordion-button::after {
-  background-image: url("/src/img/icons/dashicons_arrow-down-alt2.png") !important;
+  background-image: url("/src/img/icons/icon-arrow-down.png") !important;
 }
 
 .accordion-header .accordion-button {
