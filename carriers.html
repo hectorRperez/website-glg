@@ -53,7 +53,7 @@
 		<div class="navbar fixed-top navbar-expand-lg navbar-dark justify-content-between">
 			<div class="navbar__logo animate__animated animate__fadeInLeft">
 				<a href="/index.html">
-					<img class="test__img" src="/src/img/Capa 1.png" width="120" height="52" alt="">
+					<img class="test__img" src="/src/img/logo.png" alt="">
 				</a>
 			</div>
 			<ul class="nav__list animate__animated animate__fadeInRight">
@@ -85,7 +85,7 @@
 			</div>
 		</div>
 	</div>
-	<section class="container__carriers reliability_guaranteed">
+	<section class="container__carriers reliability_guaranteed headline">
 		<div class="reliability_guaranteed__content">
 			<h2 class="reliability_guaranteed__title">
 				Reliability Guaranteed
@@ -190,7 +190,7 @@
 		</div>
 	</section>
 
-	<section class="payment_options container__carriers">
+	<section class="payment_options container__carriers client">
 		<h2 class="carrites__subtitle">
 			Payment options
 		</h2>
@@ -221,7 +221,7 @@
 		</div>
 	</section>
 
-	<div class="working-with-us" style="margin-bottom: 100px;">
+	<div class="working-with-us headline" style="margin-bottom: 100px;">
 		<video autoplay loop muted plays-inline class="video" width="100%">
 			<source src="/src/img/carriers.mp4" type="video/mp4">
 		</video>
@@ -233,14 +233,14 @@
 		</div>
 	</div>
 
-	<section class="carriers_feedBack container__carriers">
+	<section class="carriers_feedBack container__carriers headline">
 		<h2 class="carrites__subtitle">
 			Carriers Feed Back
 		</h2>
 		<h1 class="carriers__title">What our carriers says</h1>
 	</section>
 
-	<div class="swiper mySwiper">
+	<div class="swiper mySwiper headline">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<div class="slide__wrapper">
@@ -332,7 +332,7 @@
 		</div>
 	</div>
 
-	<section class="container__carriers" style="margin-top: 80px;">
+	<section class="container__carriers headline" style="margin-top: 80px;">
 		<h2 class="faqs__subtitle carrites__subtitle">
 			FAQ’S
 		</h2>
@@ -416,7 +416,7 @@
 		</div>
 	</section>
 
-	<div class="container__carriers contact-us" style="margin-top: 80px;">
+	<div class="container__carriers contact-us headline" style="margin-top: 80px;">
 		<div class="row justify-content-between">
 			<div class="col-lg-12 col-xl-6 text-center">
 				<iframe
@@ -445,7 +445,7 @@
 		</div>
 	</div>
 
-	<div class="container__carriers location" style="margin-top: 80px;">
+	<div class="container__carriers location headline" style="margin-top: 80px;">
 		<h2 class="location__title">Find us in the following cities</h2>
 		<div class="row location__wrapper">
 			<div class="card__wrapper col-lg-4 col-xl-4 my-5">
@@ -495,6 +495,20 @@
 		</div>
 	</div>
 
+	<section class="carriersElement d-flex" style="height: 680px;">
+		<div class="container__carriers carriersElement__content">
+			<div class="carriersElement__col1">
+				<h2>Get set up as one of our carriers! </h2>
+				<p>Get registered quickly on RMIS, our carrier management platform.</p>
+				<a style="background: #1D77D4;" class="btn btn-primary content__main"
+					href="https://haulforglg.rmissecure.com/_c/std/carrier/Login.aspx" target="_blank">Register now</a>
+			</div>
+			<div class="carriersElement__col2">
+				<img width="293" height="93" src="src/img/iso-GLG.png" alt="">
+			</div>
+		</div>
+	</section>
+
 	<!-- Modals -->
 	<div class="modal-background" onclick="toggleModal()"></div>
 	<div class="modal-benefits">
@@ -514,6 +528,26 @@
 				<li>21 days (No fee)</li>
 				<li>ACH Direct Deposit</li>
 			</ul>
+		</div>
+	</div>
+
+	<div class="floating-container">
+		<div class="floating-button">
+			<i class='bx bx-dots-horizontal-rounded' style="font-size: 32px;"></i>
+		</div>
+		<div class="element-container">
+
+			<a href="https://haulforglg.rmissecure.com/_c/std/carrier/Login.aspx" target="_blank"> <span
+					class="float-element tooltip-left">
+					<p>Register now</p>
+			</a>
+			</span>
+			<span class="float-element">
+				<p>Status Payment</p>
+			</span>
+			<span class="float-element">
+				<p>Chat</p>
+			</span>
 		</div>
 	</div>
 
@@ -596,6 +630,8 @@
 
 	<!-- ======= Javascript que se encarga del navbar ======= -->
 	<script src="/src/js/navbar.js"></script>
+
+	<script src="/src/js/scrollreveal.js"></script>
 
 	<!-- Swiper carriers feedback -->
 	<script>
