@@ -721,7 +721,6 @@ body.closed .modal-benefits {
 
 //=============== END Floating Button
 
-.carriersElement {}
 
 .carriersElement__content {
 	height: 100%;
@@ -754,4 +753,12 @@ body.closed .modal-benefits {
 	font-size: 18px;
 	color: var(--white);
 	font-family: 'gilroy-medium';
+}
+
+//=========== Only movil ===========
+
+@media (max-width: 840px) {
+	.carriersElement__col2 {
+		margin: 0 auto;
+	}
 }

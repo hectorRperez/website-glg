@@ -38,18 +38,43 @@
 
 <body>
 	<div class="header">
-		<!-- Start Menu de navegación -->
-		<input id="toggle" type="checkbox">
-		<label class="toggle-container" for="toggle">
-			<span class="button button-toggle"></span>
-		</label>
 
-		<nav class="nav">
-			<a class="nav-item" href="">Dashboard</a>
-			<a class="nav-item" href="">History</a>
-			<a class="nav-item" href="">Statistics</a>
-			<a class="nav-item" href="">Settings</a>
-		</nav>
+		<div class="navbar__movil">
+			<a href="/index.html" class="logoMovil">
+				<img src="/src/img/logo.png" alt="">
+			</a>
+			<a class="menuBtn">
+				<span class="lines"></span>
+			</a>
+			<nav class="mainMenu">
+				<ul>
+					<li>
+						<a href="/index.html">Home</a>
+					</li>
+					<li>
+						<a href="#">Shippers</a>
+					</li>
+					<li>
+						<a href="/carriers.html">Carriers</a>
+					</li>
+					<li>
+						<a href="#">About Us</a>
+					</li>
+					<li>
+						<a href="#">Job&Careers</a>
+					</li>
+					<li>
+						<a href="#">Blog</a>
+					</li>
+					<li>
+						<a style="background: #1D77D4;" class="btn btn-primary content__main"
+							href="https://haulforglg.rmissecure.com/_c/std/carrier/Login.aspx" target="_blank">Join our
+							network</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
 		<div class="navbar fixed-top navbar-expand-lg navbar-dark justify-content-between">
 			<div class="navbar__logo animate__animated animate__fadeInLeft">
 				<a href="/index.html">
@@ -504,7 +529,7 @@
 					href="https://haulforglg.rmissecure.com/_c/std/carrier/Login.aspx" target="_blank">Register now</a>
 			</div>
 			<div class="carriersElement__col2">
-				<img width="293" height="93" src="src/img/iso-GLG.png" alt="">
+				<img width="215" height="68" src="src/img/iso-GLG.png" alt="">
 			</div>
 		</div>
 	</section>
@@ -661,6 +686,26 @@
 				bodyClassList.add("open");
 			}
 		};
+	</script>
+
+	<!-- TODO: DEBO HACER ESTE JS GLOBAL, MANIPULA EL NAVBAR EN MOVIL -->
+	<script>
+		const menuBtn = document.querySelector('.menuBtn');
+		const mainMenu = document.querySelector('.mainMenu');
+		const body = document.body;
+
+		menuBtn.addEventListener('click', (e) => {
+
+			menuBtn.classList.toggle('act')
+
+			if (menuBtn.classList.contains("act")) {
+				mainMenu.classList.add('act')
+				body.style.overflow = "hidden";
+			} else {
+				mainMenu.classList.remove('act')
+				body.style.overflow = "scroll";
+			}
+		})
 	</script>
 </body>
 

@@ -721,4 +721,10 @@ body.closed .modal-benefits {
   font-family: "gilroy-medium";
 }
 
+@media (max-width: 840px) {
+  .carriersElement__col2 {
+    margin: 0 auto;
+  }
+}
+
 /*# sourceMappingURL=carriers.css.map */
