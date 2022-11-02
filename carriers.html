@@ -673,40 +673,7 @@
 		});
 	</script>
 
-	<!-- Js for Modals -->
-	<script>
-		const toggleModal = () => {
-			const bodyClassList = document.body.classList;
-
-			if (bodyClassList.contains("open")) {
-				bodyClassList.remove("open");
-				bodyClassList.add("closed");
-			} else {
-				bodyClassList.remove("closed");
-				bodyClassList.add("open");
-			}
-		};
-	</script>
-
-	<!-- TODO: DEBO HACER ESTE JS GLOBAL, MANIPULA EL NAVBAR EN MOVIL -->
-	<script>
-		const menuBtn = document.querySelector('.menuBtn');
-		const mainMenu = document.querySelector('.mainMenu');
-		const body = document.body;
-
-		menuBtn.addEventListener('click', (e) => {
-
-			menuBtn.classList.toggle('act')
-
-			if (menuBtn.classList.contains("act")) {
-				mainMenu.classList.add('act')
-				body.style.overflow = "hidden";
-			} else {
-				mainMenu.classList.remove('act')
-				body.style.overflow = "scroll";
-			}
-		})
-	</script>
+	<script src="/src/js/main.movil.js"></script>
 </body>
 
 </html>
