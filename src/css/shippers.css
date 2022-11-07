@@ -11,7 +11,7 @@
 
 /* ============ END HERO SECTION ============*/
 .WhyChooseGLG {
-  background-image: url("/src/img/Group.svg");
+  background-image: url("/src/img/SVG-BG 1.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -93,9 +93,9 @@
   }
 }
 .ourServicesShippers {
-  background-image: url("/src/img/background-shippers.png");
+  background-image: url("/src/img/bg-shippers-2.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 60% 250px;
   background-size: contain;
 }
 
@@ -167,6 +167,11 @@
 
   .ourService__wrapper .ourService__element:nth-child(even) {
     flex-direction: column-reverse;
+  }
+}
+@media (max-width: 700px) {
+  .ourServicesShippers {
+    background-repeat: repeat;
   }
 }
 @media (min-width: 1200px) {

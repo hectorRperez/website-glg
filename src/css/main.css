@@ -1121,6 +1121,7 @@ footer .row {
   left: 0;
   right: 0;
   transition: all ease-in 0.2s;
+  padding: 5px 5px;
 }
 
 .mobile {
@@ -1145,6 +1146,8 @@ header {
 
 .logoMovil img {
   padding: 5px 10px;
+  position: relative;
+  z-index: 1000;
 }
 
 /* menu button */
@@ -1157,7 +1160,7 @@ header {
   z-index: 101;
 }
 .menuBtn > span {
-  background-color: #fff;
+  background-color: #FF7700;
   border-radius: 1px;
   height: 2px;
   width: 100%;
@@ -1169,7 +1172,7 @@ header {
 }
 .menuBtn > span:after, .menuBtn > span:before {
   content: "";
-  background-color: #fff;
+  background-color: #FF7700;
   border-radius: 1px;
   height: 2px;
   width: 100%;
@@ -1264,6 +1267,16 @@ header {
 }
 .mainMenu a.suBtn {
   color: #fff;
+}
+
+.mainMenu .wrapper__socialMedia {
+  position: relative;
+  bottom: -70px;
+  text-align: center;
+}
+
+.mainMenu .wrapper__socialMedia a i {
+  border-radius: 3px;
 }
 
 /* sign up button */
