@@ -1,0 +1,120 @@
+//============= START HERO AREA =============
+.hero__aboutUs {
+    background-image: url("/src/img/banner-about-us.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero__content {
+    & .content__wrapper {
+        width: 628px;
+    }
+}
+
+//========= ONLY MOVIL =============
+@media (max-width:700px) {
+    .hero__content {
+        & .content__wrapper {
+            width: 100%;
+        }
+    }
+}
+
+//============= END HERO AREA =============
+
+//============= START ABOUT US AREA =============
+
+.aboutUs {
+    margin-top: 90px;
+}
+
+.aboutUs__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.aboutUs__element_1 .small-title {
+    font-family: 'gilroy-semibold';
+    font-size: 24px;
+    color: var(--secondary-orange-2);
+}
+
+.aboutUs__element_1 .about__title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+.aboutUs__element_1 .aboutUs__content {
+    font-family: 'gilroy-medium', sans-serif;
+    font-size: 18px;
+    color: var(--white);
+    text-align: justify;
+}
+
+.aboutUs__wrapper_2 {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.aboutUs__wrapper_2 .aboutUs__element_1 {
+    text-align: right;
+
+}
+
+.aboutUs__wrapper_2 .aboutUs__element_1 {
+    margin-top: 40px;
+}
+
+.aboutUs__wrapper_2 .aboutUs__element_1 .about__title {
+    font-size: 32px;
+}
+
+@media (min-width:1200px) {
+    .aboutUs__wrapper .aboutUs__element_1 {
+        width: 597px;
+    }
+
+    .aboutUs__wrapper .aboutUs__element_2 {
+        width: 630px;
+    }
+
+    .aboutUs__wrapper_2 .aboutUs__element_1 {
+        width: 597px;
+    }
+
+    .aboutUs__wrapper_2 .aboutUs__element_2 {
+        width: 630px;
+    }
+}
+
+@media (max-width:1200px) {
+    .aboutUs__wrapper_2 {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+//============= END ABOUT US AREA =============
+
+//=============== START Why choose GLG? ===============
+.WhyChooseGLG__card__title {
+    font-size: 24px;
+}
+
+.WhyChooseGLG__card__content {
+    font-size: 16px;
+}
+
+//=============== END Why choose GLG? ===============
