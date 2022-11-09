@@ -1291,5 +1291,27 @@ header {
     display: block;
   }
 }
+.border__navigation {
+  border-bottom: 2px solid #E04D01;
+}
+
+/*** Spinner ***/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+  background-color: #041423;
+}
+
+#spinner.show {
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.spinner-border {
+  color: #E04D01;
+}
 
 /*# sourceMappingURL=main.css.map */

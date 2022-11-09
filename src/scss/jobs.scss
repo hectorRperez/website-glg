@@ -1,0 +1,32 @@
+//============ START HERO JOBS SECTION ===========
+.hero {
+    background-image: url("/src/img/banner-jobs.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.heroJobs h1 {
+    width: 531px;
+}
+
+
+//========= Only movil ============
+@media (max-width: 800px) {
+    .heroJobs h1 {
+        width: 100%;
+    }
+
+}
+
+// ============ END HERO JOBS SECTION ===========
+
+// ==========  START Count on us for ==========-
+.card__link {
+    font-size: 16px;
+}
+
+// ==========  END Count on us for ==========-
