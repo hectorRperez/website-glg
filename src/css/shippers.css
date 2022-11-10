@@ -60,7 +60,7 @@
 .WhyChooseGLG__card__title {
   font-family: "Barlow", sans-serif;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--white);
   text-align: left;
   line-height: 30px;
@@ -73,7 +73,7 @@
 
 .WhyChooseGLG__card__content {
   font-family: "gilroy-medium", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--white);
   text-align: justify;
 }
@@ -95,7 +95,7 @@
 .ourServicesShippers {
   background-image: url("/src/img/bg-shippers-2.png");
   background-repeat: no-repeat;
-  background-position: 60% 250px;
+  background-position: 80% 205px;
   background-size: contain;
 }
 
